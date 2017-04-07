@@ -15,12 +15,14 @@
         android:layout_gravity="center"
         android:layout_margin="10dp">
 
+
         <TextView
             android:id="@+id/main_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Let's Start to Play!"
             android:textSize="25dp" />
+
 
 
     </LinearLayout>
@@ -118,4 +120,40 @@
     </LinearLayout>
 
 
+
+    <Button android:id="@+id/main_restart"
+        android:width="10dp"
+        android:height="10dp"
+        android:text="restart"
+        android:textSize="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:onClick="exit"
+        android:textStyle="normal|bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="131dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="68dp"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:gravity="center" />
+
+
+
+
+
 </LinearLayout>
+

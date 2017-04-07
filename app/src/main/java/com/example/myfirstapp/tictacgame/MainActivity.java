@@ -1,11 +1,18 @@
 package com.example.myfirstapp.tictacgame;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import static android.R.id.message;
 
 public class MainActivity extends Activity {
 
@@ -27,12 +34,45 @@ public class MainActivity extends Activity {
         final Button Btn6 = (Button) findViewById(R.id.main_button6);
         final Button Btn7 = (Button) findViewById(R.id.main_button7);
         final Button Btn8 = (Button) findViewById(R.id.main_button8);
+        final Button BtnRestart = (Button) findViewById(R.id.main_restart);
         final TextView curPlayer = (TextView) findViewById(R.id.main_whoIsPlayingText);
+
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle("Restart");
+        alertDialogBuilder.setMessage("Are you sure to restart the game?");
 
         //init Array button with NULL
         for(int i=0 ;i<btnArray.length;i++)
             btnArray[i] = 0;
 
+
+        BtnRestart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("BTN", "The user clicked on Restart Button");
+                alertDialogBuilder.create();
+
+                alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        Log.d("BTN","User clicked on ok restart button");
+                        restartTheGame();
+                        Toast.makeText(MainActivity.this,"Game Restarted!",Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(MainActivity.this,"Keep Playing!",Toast.LENGTH_SHORT).show();
+                        Log.d("BTN","User clicked on No restart button");
+                    }
+                });
+
+                alertDialogBuilder.show();
+            }
+        });
 
 
         Btn0.setOnClickListener(new View.OnClickListener() {
@@ -407,6 +447,17 @@ public class MainActivity extends Activity {
 
 
 
+    }
+
+    private void restartTheGame() {
+        setCurrentState(1);
+        clicksCounter=0;
+        clicksCounter =0;
+        btnArray = new Integer[9];
+        //init Array button with NULL
+        for(int i=0 ;i<btnArray.length;i++)
+            btnArray[i] = 0;
+        onCreate(Bundle.EMPTY);
     }
 
     public boolean checkForTheWinner(View v) {
