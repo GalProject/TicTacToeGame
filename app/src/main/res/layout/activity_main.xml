@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingLeft="25dp"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    tools:context="com.example.myfirstapp.tictacgame.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/main_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let's Start to Play!"
+            android:textSize="25dp" />
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <Button android:id="@+id/main_button0"
+            android:width="80dp"
+            android:height="80dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button android:id="@+id/main_button1"
+            android:width="80dp"
+            android:height="80dp"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content" />
+        <Button android:id="@+id/main_button2"
+            android:width="80dp"
+            android:height="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <Button android:id="@+id/main_button3"
+            android:width="80dp"
+            android:height="80dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button android:id="@+id/main_button4"
+            android:width="80dp"
+            android:height="80dp"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content" />
+        <Button android:id="@+id/main_button5"
+            android:width="80dp"
+            android:height="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+    <Button android:id="@+id/main_button6"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="30dp"
+        android:width="80dp"
+        android:height="80dp"
+        android:layout_height="wrap_content" />
+    <Button android:id="@+id/main_button7"
+        android:width="80dp"
+        android:height="80dp"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content" />
+    <Button android:id="@+id/main_button8"
+        android:width="80dp"
+        android:height="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="center">
+
+        <TextView android:id="@+id/main_whoIsPlayingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player X its your turn!"
+            android:textSize="30dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>
