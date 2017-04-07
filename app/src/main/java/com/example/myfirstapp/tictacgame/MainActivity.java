@@ -547,4 +547,21 @@ public class MainActivity extends Activity {
     public void setCurrentState(int currentState) {
         this.currentState = currentState;
     }
+
+    public int getClicksCounter() {
+        return clicksCounter;
+    }
+
+    public void setClicksCounter(int clicksCounter) {
+        this.clicksCounter = clicksCounter;
+    }
+
+    public Integer[] getBtnArray() {
+        return btnArray;
+    }
+
+    public void setBtnArray(Integer[] btnArray) {
+        this.btnArray = btnArray;
+    }
+
 }
