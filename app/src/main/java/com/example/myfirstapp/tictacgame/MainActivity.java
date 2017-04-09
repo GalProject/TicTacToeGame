@@ -453,7 +453,6 @@ public class MainActivity extends Activity {
         setCurrentState(1);
         clicksCounter=0;
         clicksCounter =0;
-        btnArray = new Integer[9];
         //init Array button with NULL
         for(int i=0 ;i<btnArray.length;i++)
             btnArray[i] = 0;
