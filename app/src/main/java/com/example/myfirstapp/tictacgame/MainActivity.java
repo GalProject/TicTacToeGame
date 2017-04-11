@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -406,75 +407,122 @@ public class MainActivity extends Activity {
     public boolean checkForTheWinner(View v) {
         //Checking 1
         if(btnArray[0] == 1 && btnArray[1] == 1 && btnArray[2] == 1){
-            Log.d("BTN","X is the winner - a on matrix");
-
+            Log.d("BTN","X is the winner - 012 on matrix");
+            getTheButtonObjectsArray()[0].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[1].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[2].setBackgroundResource(R.drawable.thexwithshadow);
             return true;
         }
         if (btnArray[0] == 2 && btnArray[1] == 2 && btnArray[2] == 2){
-            Log.d("BTN","Y is the winner a on matrix");
+            Log.d("BTN","Y is the winner - 012 on matrix");
+            getTheButtonObjectsArray()[0].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[1].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[2].setBackgroundResource(R.drawable.circlewithshadow);
             return true;
         }
         //Checking 2
         if(btnArray[3] == 1 && btnArray[4] == 1 && btnArray[5] == 1){
             Log.d("BTN","X is the winner - 345 on matrix");
+            getTheButtonObjectsArray()[3].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[5].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[5].setBackgroundResource(R.drawable.thexwithshadow);
             return true;
         }
         if (btnArray[3] == 2 && btnArray[4] == 2 && btnArray[5] == 2){
             Log.d("BTN","Y is the winner - 345 on matrix");
+            getTheButtonObjectsArray()[3].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[5].setBackgroundResource(R.drawable.circlewithshadow);
             return true;
         }
         //Checking 3
         if(btnArray[6] == 1 && btnArray[7] == 1 && btnArray[8] == 1){
             Log.d("BTN","X is the winner - 678 on matrix");
+            getTheButtonObjectsArray()[6].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[7].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[8].setBackgroundResource(R.drawable.thexwithshadow);
             return true;
         }
         if (btnArray[6] == 2 && btnArray[7] == 2 && btnArray[8] == 2){
             Log.d("BTN","Y is the winner - 678 on matrix");
+            getTheButtonObjectsArray()[6].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[7].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[8].setBackgroundResource(R.drawable.circlewithshadow);
             return true;
         }
         //Checking 4
         if(btnArray[0] == 1 && btnArray[3] == 1 && btnArray[6] == 1){
             Log.d("BTN","X is the winner - 036 on matrix");
+            getTheButtonObjectsArray()[0].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[3].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[6].setBackgroundResource(R.drawable.thexwithshadow);
             return true;
         }
         if (btnArray[0] == 2 && btnArray[3] == 2 && btnArray[6] == 2){
             Log.d("BTN","Y is the winner - 036 on matrix");
+            getTheButtonObjectsArray()[0].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[3].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[6].setBackgroundResource(R.drawable.circlewithshadow);
             return true;
         }
         //Checking 5
         if(btnArray[1] == 1 && btnArray[4] == 1 && btnArray[7] == 1){
             Log.d("BTN","X is the winner - 147 on matrix");
+            getTheButtonObjectsArray()[1].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[7].setBackgroundResource(R.drawable.thexwithshadow);
             return true;
         }
         if (btnArray[1] == 2 && btnArray[4] == 2 && btnArray[7] == 2){
             Log.d("BTN","Y is the winner - 147 on matrix");
+            getTheButtonObjectsArray()[1].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[7].setBackgroundResource(R.drawable.circlewithshadow);
             return true;
         }
         //Checking 6
         if(btnArray[2] == 1 && btnArray[5] == 1 && btnArray[8] == 1){
             Log.d("BTN","X is the winner - 258 on matrix");
+            getTheButtonObjectsArray()[2].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[5].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[8].setBackgroundResource(R.drawable.thexwithshadow);
             return true;
         }
         if (btnArray[2] == 2 && btnArray[5] == 2 && btnArray[8] == 2){
             Log.d("BTN","Y is the winner - 258 on matrix");
+            getTheButtonObjectsArray()[2].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[5].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[8].setBackgroundResource(R.drawable.circlewithshadow);
             return true;
         }
         //Checking 7
         if(btnArray[0] == 1 && btnArray[4] == 1 && btnArray[8] == 1){
             Log.d("BTN","X is the winner - 048 on matrix");
+            getTheButtonObjectsArray()[0].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[8].setBackgroundResource(R.drawable.thexwithshadow);
             return true;
         }
         if (btnArray[0] == 2 && btnArray[4] == 2 && btnArray[8] == 2){
             Log.d("BTN","Y is the winner - 048 on matrix");
+            getTheButtonObjectsArray()[0].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[8].setBackgroundResource(R.drawable.circlewithshadow);
             return true;
         }
         //Checking 8
         if(btnArray[2] == 1 && btnArray[4] == 1 && btnArray[6] == 1){
             Log.d("BTN","X is the winner - 246 on matrix");
+            getTheButtonObjectsArray()[2].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[6].setBackgroundResource(R.drawable.thexwithshadow);
             return true;
         }
         if (btnArray[2] == 2 && btnArray[4] == 2 && btnArray[6] == 2){
             Log.d("BTN","Y is the winner - 246 on matrix");
+            getTheButtonObjectsArray()[2].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.circlewithshadow);
+            getTheButtonObjectsArray()[6].setBackgroundResource(R.drawable.circlewithshadow);
             return true;
         }
         else
