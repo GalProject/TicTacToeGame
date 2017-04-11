@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
     int currentState =1;
     int clicksCounter =0;
     Integer[] btnArray = new Integer[9];
+    Button[] theButtonObjectsArray = new Button[9];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,14 +27,24 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         final Button Btn0 = (Button) findViewById(R.id.main_button0);
+        theButtonObjectsArray[0] = Btn0;
         final Button Btn1 = (Button) findViewById(R.id.main_button1);
+        theButtonObjectsArray[1] = Btn1;
         final Button Btn2 = (Button) findViewById(R.id.main_button2);
+        theButtonObjectsArray[2] = Btn2;
         final Button Btn3 = (Button) findViewById(R.id.main_button3);
+        theButtonObjectsArray[3] = Btn3;
         final Button Btn4 = (Button) findViewById(R.id.main_button4);
+        theButtonObjectsArray[4] = Btn4;
         final Button Btn5 = (Button) findViewById(R.id.main_button5);
+        theButtonObjectsArray[5] = Btn5;
         final Button Btn6 = (Button) findViewById(R.id.main_button6);
+        theButtonObjectsArray[6] = Btn6;
         final Button Btn7 = (Button) findViewById(R.id.main_button7);
+        theButtonObjectsArray[7] = Btn7;
         final Button Btn8 = (Button) findViewById(R.id.main_button8);
+        theButtonObjectsArray[8] = Btn8;
+
         final Button BtnRestart = (Button) findViewById(R.id.main_restart);
         final TextView curPlayer = (TextView) findViewById(R.id.main_whoIsPlayingText);
 
@@ -103,15 +114,7 @@ public class MainActivity extends Activity {
                 clicksCounter++;
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
-                    Btn0.setClickable(false);
-                    Btn1.setClickable(false);
-                    Btn2.setClickable(false);
-                    Btn3.setClickable(false);
-                    Btn4.setClickable(false);
-                    Btn5.setClickable(false);
-                    Btn6.setClickable(false);
-                    Btn7.setClickable(false);
-                    Btn8.setClickable(false);
+                    setUnclickableAlltheButtons();
                 }
 
             }
@@ -145,15 +148,7 @@ public class MainActivity extends Activity {
                 clicksCounter++;
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
-                    Btn0.setClickable(false);
-                    Btn1.setClickable(false);
-                    Btn2.setClickable(false);
-                    Btn3.setClickable(false);
-                    Btn4.setClickable(false);
-                    Btn5.setClickable(false);
-                    Btn6.setClickable(false);
-                    Btn7.setClickable(false);
-                    Btn8.setClickable(false);
+                    setUnclickableAlltheButtons();
                 }
             }
         });
@@ -186,15 +181,7 @@ public class MainActivity extends Activity {
                 clicksCounter++;
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
-                    Btn0.setClickable(false);
-                    Btn1.setClickable(false);
-                    Btn2.setClickable(false);
-                    Btn3.setClickable(false);
-                    Btn4.setClickable(false);
-                    Btn5.setClickable(false);
-                    Btn6.setClickable(false);
-                    Btn7.setClickable(false);
-                    Btn8.setClickable(false);
+                    setUnclickableAlltheButtons();
                 }
             }
         });
@@ -227,15 +214,7 @@ public class MainActivity extends Activity {
                 clicksCounter++;
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
-                    Btn0.setClickable(false);
-                    Btn1.setClickable(false);
-                    Btn2.setClickable(false);
-                    Btn3.setClickable(false);
-                    Btn4.setClickable(false);
-                    Btn5.setClickable(false);
-                    Btn6.setClickable(false);
-                    Btn7.setClickable(false);
-                    Btn8.setClickable(false);
+                    setUnclickableAlltheButtons();
                 }
             }
         });
@@ -268,15 +247,7 @@ public class MainActivity extends Activity {
                 clicksCounter++;
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
-                    Btn0.setClickable(false);
-                    Btn1.setClickable(false);
-                    Btn2.setClickable(false);
-                    Btn3.setClickable(false);
-                    Btn4.setClickable(false);
-                    Btn5.setClickable(false);
-                    Btn6.setClickable(false);
-                    Btn7.setClickable(false);
-                    Btn8.setClickable(false);
+                    setUnclickableAlltheButtons();
                 }
             }
         });
@@ -309,15 +280,7 @@ public class MainActivity extends Activity {
                 clicksCounter++;
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
-                    Btn0.setClickable(false);
-                    Btn1.setClickable(false);
-                    Btn2.setClickable(false);
-                    Btn3.setClickable(false);
-                    Btn4.setClickable(false);
-                    Btn5.setClickable(false);
-                    Btn6.setClickable(false);
-                    Btn7.setClickable(false);
-                    Btn8.setClickable(false);
+                    setUnclickableAlltheButtons();
                 }
             }
         });
@@ -350,15 +313,7 @@ public class MainActivity extends Activity {
                 clicksCounter++;
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
-                    Btn0.setClickable(false);
-                    Btn1.setClickable(false);
-                    Btn2.setClickable(false);
-                    Btn3.setClickable(false);
-                    Btn4.setClickable(false);
-                    Btn5.setClickable(false);
-                    Btn6.setClickable(false);
-                    Btn7.setClickable(false);
-                    Btn8.setClickable(false);
+                    setUnclickableAlltheButtons();
                 }
             }
         });
@@ -391,15 +346,7 @@ public class MainActivity extends Activity {
                 clicksCounter++;
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
-                    Btn0.setClickable(false);
-                    Btn1.setClickable(false);
-                    Btn2.setClickable(false);
-                    Btn3.setClickable(false);
-                    Btn4.setClickable(false);
-                    Btn5.setClickable(false);
-                    Btn6.setClickable(false);
-                    Btn7.setClickable(false);
-                    Btn8.setClickable(false);
+                    setUnclickableAlltheButtons();
                 }
             }
         });
@@ -432,21 +379,18 @@ public class MainActivity extends Activity {
                 clicksCounter++;
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
-                    Btn0.setClickable(false);
-                    Btn1.setClickable(false);
-                    Btn2.setClickable(false);
-                    Btn3.setClickable(false);
-                    Btn4.setClickable(false);
-                    Btn5.setClickable(false);
-                    Btn6.setClickable(false);
-                    Btn7.setClickable(false);
-                    Btn8.setClickable(false);
+                 setUnclickableAlltheButtons();
                 }
             }
         });
 
 
 
+    }
+
+    private void setUnclickableAlltheButtons() {
+        for(int i=0; i < getTheButtonObjectsArray().length;i++)
+            getTheButtonObjectsArray()[i].setClickable(false);
     }
 
     private void restartTheGame() {
@@ -463,8 +407,8 @@ public class MainActivity extends Activity {
         //Checking 1
         if(btnArray[0] == 1 && btnArray[1] == 1 && btnArray[2] == 1){
             Log.d("BTN","X is the winner - a on matrix");
-            return true;
 
+            return true;
         }
         if (btnArray[0] == 2 && btnArray[1] == 2 && btnArray[2] == 2){
             Log.d("BTN","Y is the winner a on matrix");
@@ -561,6 +505,14 @@ public class MainActivity extends Activity {
 
     public void setBtnArray(Integer[] btnArray) {
         this.btnArray = btnArray;
+    }
+
+    public Button[] getTheButtonObjectsArray() {
+        return theButtonObjectsArray;
+    }
+
+    public void setTheButtonObjectsArray(Button[] theButtonObjectsArray) {
+        this.theButtonObjectsArray = theButtonObjectsArray;
     }
 
 }
