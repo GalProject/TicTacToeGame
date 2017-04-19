@@ -424,7 +424,7 @@ public class MainActivity extends Activity {
         if(btnArray[3] == 1 && btnArray[4] == 1 && btnArray[5] == 1){
             Log.d("BTN","X is the winner - 345 on matrix");
             getTheButtonObjectsArray()[3].setBackgroundResource(R.drawable.thexwithshadow);
-            getTheButtonObjectsArray()[5].setBackgroundResource(R.drawable.thexwithshadow);
+            getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[5].setBackgroundResource(R.drawable.thexwithshadow);
             return true;
         }
