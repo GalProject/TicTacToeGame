@@ -13,25 +13,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp">
+        android:orientation="horizontal"
+        android:layout_margin="7dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="X: "/>
+
+        <TextView
+            android:id="@+id/xCounter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:layout_marginLeft="60dp"
+            android:text="Y: "/>
 
 
         <TextView
-            android:id="@+id/main_textView"
-            android:layout_width="wrap_content"
+            android:id="@+id/yCounter"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start to Play!"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            />
 
         <Button android:id="@+id/main_restart"
-            android:width="10dp"
-            android:height="10dp"
-            android:text="restart"
-            android:textStyle="italic"
+            android:text="Restart"
             android:background="@color/colorPrimary"
-            android:textSize="12dp"
-            android:layout_marginLeft="60dp"
-            android:layout_width="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginLeft="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
 

@@ -19,6 +19,8 @@ public class MainActivity extends Activity {
 
     int currentState =1;
     int clicksCounter =0;
+    Integer numOfxCounter=0;
+    Integer numOfyCounter=0;
     Integer[] btnArray = new Integer[9];
     Button[] theButtonObjectsArray = new Button[9];
 
@@ -49,6 +51,9 @@ public class MainActivity extends Activity {
         final Button BtnRestart = (Button) findViewById(R.id.main_restart);
         final TextView curPlayer = (TextView) findViewById(R.id.main_whoIsPlayingText);
 
+        final TextView xCounter = (TextView) findViewById(R.id.xCounter);
+        final TextView yCounter = (TextView) findViewById(R.id.yCounter);
+
         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle("Restart");
         alertDialogBuilder.setMessage("Are you sure to restart the game?");
@@ -57,6 +62,9 @@ public class MainActivity extends Activity {
         for(int i=0 ;i<btnArray.length;i++)
             btnArray[i] = 0;
 
+        //init the x,y counter with NULL
+        xCounter.setText(numOfxCounter.toString());
+        yCounter.setText(numOfyCounter.toString());
 
         BtnRestart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +124,8 @@ public class MainActivity extends Activity {
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
                     setUnclickableAlltheButtons();
+                    xCounter.setText(numOfxCounter.toString());
+                    yCounter.setText(numOfyCounter.toString());
                 }
 
             }
@@ -150,6 +160,8 @@ public class MainActivity extends Activity {
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
                     setUnclickableAlltheButtons();
+                    xCounter.setText(numOfxCounter.toString());
+                    yCounter.setText(numOfyCounter.toString());
                 }
             }
         });
@@ -183,6 +195,8 @@ public class MainActivity extends Activity {
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
                     setUnclickableAlltheButtons();
+                    xCounter.setText(numOfxCounter.toString());
+                    yCounter.setText(numOfyCounter.toString());
                 }
             }
         });
@@ -216,6 +230,8 @@ public class MainActivity extends Activity {
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
                     setUnclickableAlltheButtons();
+                    xCounter.setText(numOfxCounter.toString());
+                    yCounter.setText(numOfyCounter.toString());
                 }
             }
         });
@@ -249,6 +265,8 @@ public class MainActivity extends Activity {
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
                     setUnclickableAlltheButtons();
+                    xCounter.setText(numOfxCounter.toString());
+                    yCounter.setText(numOfyCounter.toString());
                 }
             }
         });
@@ -282,6 +300,8 @@ public class MainActivity extends Activity {
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
                     setUnclickableAlltheButtons();
+                    xCounter.setText(numOfxCounter.toString());
+                    yCounter.setText(numOfyCounter.toString());
                 }
             }
         });
@@ -315,6 +335,8 @@ public class MainActivity extends Activity {
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
                     setUnclickableAlltheButtons();
+                    xCounter.setText(numOfxCounter.toString());
+                    yCounter.setText(numOfyCounter.toString());
                 }
             }
         });
@@ -348,6 +370,8 @@ public class MainActivity extends Activity {
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
                     setUnclickableAlltheButtons();
+                    xCounter.setText(numOfxCounter.toString());
+                    yCounter.setText(numOfyCounter.toString());
                 }
             }
         });
@@ -380,7 +404,9 @@ public class MainActivity extends Activity {
                 clicksCounter++;
                 if(checkForTheWinner(v)){
                     curPlayer.setText("Winner!");
-                 setUnclickableAlltheButtons();
+                    setUnclickableAlltheButtons();
+                    xCounter.setText(numOfxCounter.toString());
+                    yCounter.setText(numOfyCounter.toString());
                 }
             }
         });
@@ -411,6 +437,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[0].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[1].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[2].setBackgroundResource(R.drawable.thexwithshadow);
+            numOfxCounter++;
             return true;
         }
         if (btnArray[0] == 2 && btnArray[1] == 2 && btnArray[2] == 2){
@@ -418,6 +445,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[0].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[1].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[2].setBackgroundResource(R.drawable.circlewithshadow);
+            numOfyCounter++;
             return true;
         }
         //Checking 2
@@ -426,6 +454,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[3].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[5].setBackgroundResource(R.drawable.thexwithshadow);
+            numOfxCounter++;
             return true;
         }
         if (btnArray[3] == 2 && btnArray[4] == 2 && btnArray[5] == 2){
@@ -433,6 +462,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[3].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[5].setBackgroundResource(R.drawable.circlewithshadow);
+            numOfyCounter++;
             return true;
         }
         //Checking 3
@@ -441,6 +471,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[6].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[7].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[8].setBackgroundResource(R.drawable.thexwithshadow);
+            numOfxCounter++;
             return true;
         }
         if (btnArray[6] == 2 && btnArray[7] == 2 && btnArray[8] == 2){
@@ -448,6 +479,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[6].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[7].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[8].setBackgroundResource(R.drawable.circlewithshadow);
+            numOfyCounter++;
             return true;
         }
         //Checking 4
@@ -456,6 +488,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[0].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[3].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[6].setBackgroundResource(R.drawable.thexwithshadow);
+            numOfxCounter++;
             return true;
         }
         if (btnArray[0] == 2 && btnArray[3] == 2 && btnArray[6] == 2){
@@ -463,6 +496,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[0].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[3].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[6].setBackgroundResource(R.drawable.circlewithshadow);
+            numOfyCounter++;
             return true;
         }
         //Checking 5
@@ -471,6 +505,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[1].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[7].setBackgroundResource(R.drawable.thexwithshadow);
+            numOfxCounter++;
             return true;
         }
         if (btnArray[1] == 2 && btnArray[4] == 2 && btnArray[7] == 2){
@@ -478,6 +513,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[1].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[7].setBackgroundResource(R.drawable.circlewithshadow);
+            numOfyCounter++;
             return true;
         }
         //Checking 6
@@ -486,6 +522,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[2].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[5].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[8].setBackgroundResource(R.drawable.thexwithshadow);
+            numOfxCounter++;
             return true;
         }
         if (btnArray[2] == 2 && btnArray[5] == 2 && btnArray[8] == 2){
@@ -493,6 +530,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[2].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[5].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[8].setBackgroundResource(R.drawable.circlewithshadow);
+            numOfyCounter++;
             return true;
         }
         //Checking 7
@@ -501,6 +539,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[0].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[8].setBackgroundResource(R.drawable.thexwithshadow);
+            numOfxCounter++;
             return true;
         }
         if (btnArray[0] == 2 && btnArray[4] == 2 && btnArray[8] == 2){
@@ -508,6 +547,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[0].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[8].setBackgroundResource(R.drawable.circlewithshadow);
+            numOfyCounter++;
             return true;
         }
         //Checking 8
@@ -516,6 +556,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[2].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.thexwithshadow);
             getTheButtonObjectsArray()[6].setBackgroundResource(R.drawable.thexwithshadow);
+            numOfxCounter++;
             return true;
         }
         if (btnArray[2] == 2 && btnArray[4] == 2 && btnArray[6] == 2){
@@ -523,6 +564,7 @@ public class MainActivity extends Activity {
             getTheButtonObjectsArray()[2].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[4].setBackgroundResource(R.drawable.circlewithshadow);
             getTheButtonObjectsArray()[6].setBackgroundResource(R.drawable.circlewithshadow);
+            numOfyCounter++;
             return true;
         }
         else
