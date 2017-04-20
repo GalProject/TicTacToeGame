@@ -1,7 +1,7 @@
 # Tic Tac Toe Game Project
 Tic Tac Toe Game - develop for Android devices
 # Google Play
-Link: https://play.google.com/store/apps/details?id=com.galbenevgi.tictacgame
+https://play.google.com/store/apps/details?id=com.galbenevgi.tictacgame
 
 # Pics
 ![My image](http://i64.tinypic.com/28su6pv.png)
